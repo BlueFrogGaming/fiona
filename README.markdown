@@ -3,6 +3,14 @@
 Fiona lets you unstructured configuration data in your SQL database.
 Examples include application settings and template data.
 
+## Requirements
+
+* Activerecord (tested with Rails 3.1)
+
+## Installation
+
+    gem install fiona
+
 ## Contributing to fiona
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
