@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "fiona"
-  gem.homepage = "http://github.com/chadrem/fiona"
+  gem.homepage = "http://github.com/BlueFrogGaming/fiona"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rails 3 database templating engine.}
+  gem.description = %Q{Easily store template data with simplicy. Easily access the data from anywhere in your application.}
   gem.email = "chad@remesch.com"
   gem.authors = ["Chad Remesch"]
   # dependencies defined in Gemfile
