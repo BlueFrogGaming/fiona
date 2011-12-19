@@ -1,6 +1,6 @@
 # fiona - Rails 3 configuration data engine.
 
-Fiona lets you unstructured configuration data in your SQL database.
+Fiona lets you store unstructured configuration data in your SQL database.
 Examples include application settings and template data.
 
 ## Requirements

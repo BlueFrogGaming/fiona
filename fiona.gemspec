@@ -10,11 +10,11 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chad Remesch"]
   s.date = "2011-12-19"
-  s.description = "TODO: longer description of your gem"
+  s.description = "Easily store template data with simplicy. Easily access the data from anywhere in your application."
   s.email = "chad@remesch.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
     ".document",
@@ -22,9 +22,10 @@ Gem::Specification.new do |s|
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.markdown",
     "Rakefile",
     "VERSION",
+    "fiona.gemspec",
     "lib/fiona.rb",
     "lib/template.rb",
     "lib/template_attribute.rb",
@@ -32,11 +33,11 @@ Gem::Specification.new do |s|
     "spec/template_attribute_spec.rb",
     "spec/template_spec.rb"
   ]
-  s.homepage = "http://github.com/chadrem/fiona"
+  s.homepage = "http://github.com/BlueFrogGaming/fiona"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Rails 3 database templating engine."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
