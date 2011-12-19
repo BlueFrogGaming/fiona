@@ -11,6 +11,10 @@ Examples include application settings and template data.
 
     gem install fiona
 
+If you are using bundler, add the following to your Gemfile:
+
+    gem "fiona"
+
 ## Contributing to fiona
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
