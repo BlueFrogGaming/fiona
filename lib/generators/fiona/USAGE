@@ -1,0 +1,8 @@
+Description:
+    Generate migration for Fiona models.
+
+Example:
+    rails generate fiona
+
+    This will create:
+        db/migrate/create_fiona_tables.rb
