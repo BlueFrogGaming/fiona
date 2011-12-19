@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "fiona"
   gem.homepage = "http://github.com/BlueFrogGaming/fiona"
   gem.license = "MIT"
-  gem.summary = %Q{Rails 3 database templating engine.}
-  gem.description = %Q{Easily store template data with simplicy. Easily access the data from anywhere in your application.}
+  gem.summary = %Q{Easily store and use template data with Rails.}
+  gem.description = %Q{Easily store and use template data with Rails.}
   gem.email = "chad@remesch.com"
   gem.authors = ["Chad Remesch"]
   # dependencies defined in Gemfile
