@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "fiona"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chad Remesch"]
@@ -27,9 +27,9 @@ Gem::Specification.new do |s|
     "VERSION",
     "fiona.gemspec",
     "lib/fiona.rb",
-    "lib/generators/fiona/lib/generators/fiona/USAGE",
-    "lib/generators/fiona/lib/generators/fiona/fiona_generator.rb",
-    "lib/generators/fiona/lib/generators/fiona/templates/create_fiona_tables.rb",
+    "lib/generators/fiona/USAGE",
+    "lib/generators/fiona/fiona_generator.rb",
+    "lib/generators/fiona/templates/create_fiona_tables.rb",
     "lib/template.rb",
     "lib/template_attribute.rb",
     "spec/spec_helper.rb",
