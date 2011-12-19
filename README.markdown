@@ -2,6 +2,7 @@
 
 Fiona lets you store unstructured configuration data in your SQL database.
 Examples include application settings and template data.
+Any JSON compatible datastructures and values are permitted (integer, float, string, hash, array, true, false, null, etc).
 
 ## Requirements
 
