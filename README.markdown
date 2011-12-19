@@ -1,9 +1,10 @@
-= fiona
+# fiona - Rails 3 configuration data engine.
 
-Description goes here.
+Fiona lets you unstructured configuration data in your SQL database.
+Examples include application settings and template data.
 
-== Contributing to fiona
- 
+= Contributing to fiona
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
