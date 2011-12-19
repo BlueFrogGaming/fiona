@@ -15,6 +15,10 @@ If you are using bundler, add the following to your Gemfile:
 
     gem "fiona"
 
+## Usage
+
+TODO
+
 ## Contributing to fiona
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
