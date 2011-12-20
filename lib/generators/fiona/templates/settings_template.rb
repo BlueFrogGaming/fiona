@@ -1,0 +1,2 @@
+class SettingsTemplate < ApplicationTemplate
+end

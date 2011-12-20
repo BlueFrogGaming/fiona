@@ -5,4 +5,7 @@ Example:
     rails generate fiona
 
     This will create:
+        app/templates/application_template.rb
+        app/templates/settings_template.rb
+        config/initializers/settings.rb
         db/migrate/create_fiona_tables.rb
