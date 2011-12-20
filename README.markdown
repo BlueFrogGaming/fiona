@@ -26,7 +26,7 @@ After you install the gem, you need to run Fiona's generator:
 
 Create an instance of Template:
 
-    t = Template.new(:key => 'some_template'
+    t = Template.new(:key => 'some_template')
     t.some_var = 'some sweet value'
     t.save!
 
