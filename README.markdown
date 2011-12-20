@@ -42,7 +42,7 @@ included SettingsTemplate feature is an example of this.
 ### SettingsTemplate
 
 Fiona comes with a template class named SettingsTemplate and an
-associated Rails initializer for storing simplifying the management of
+associated Rails initializer. Together they simplify the management of
 application settings. To begin using this feature you will need to
 uncomment the code in config/initializers/settings.rb.  Your entire
 application will then have access to the constant "S" which contains all
