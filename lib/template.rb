@@ -1,4 +1,5 @@
-class TemplateBase < ActiveRecord::Base
+class Template < ActiveRecord::Base
+
   has_many :raw_attributes, :class_name => 'TemplateAttribute', :dependent => :destroy
 
   after_save :save_attributes
@@ -36,7 +37,7 @@ class TemplateBase < ActiveRecord::Base
     @processed_attributes.each do |key, val|
       TemplateAttribute.transaction do
         raw_attr = TemplateAttribute.find_or_initialize_by_template_id_and_key(id, key)
-        raw_attr.value = TemplateBase.serialize_attribute(val)
+        raw_attr.value = Template.serialize_attribute(val)
         raw_attr.save!
       end
     end
@@ -51,7 +52,7 @@ class TemplateBase < ActiveRecord::Base
     @processed_attributes = {}
 
     raw_attributes.each do |ra|
-      @processed_attributes[ra.key.to_sym] = TemplateBase.deserialize_attribute(ra.value)
+      @processed_attributes[ra.key.to_sym] = Template.deserialize_attribute(ra.value)
     end
 
     return @processed_attributes

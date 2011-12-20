@@ -15,7 +15,6 @@ class FionaGenerator < Rails::Generators::Base
   end
 
   def create_templates
-    copy_file 'application_template.rb', 'app/templates/application_template.rb'
     copy_file 'settings_template.rb', 'app/templates/settings_template.rb'
   end
 end

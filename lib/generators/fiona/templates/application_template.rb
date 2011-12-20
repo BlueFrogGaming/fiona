@@ -1,2 +1,0 @@
-class ApplicationTemplate < TemplateBase
-end

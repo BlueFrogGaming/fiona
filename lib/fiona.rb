@@ -1,3 +1,3 @@
 require 'active_record'
-require 'template_base'
+require 'template'
 require 'template_attribute'

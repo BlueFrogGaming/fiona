@@ -1,2 +1,2 @@
-class SettingsTemplate < ApplicationTemplate
+class SettingsTemplate < Template
 end
