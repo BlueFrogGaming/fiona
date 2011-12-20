@@ -30,43 +30,32 @@ This should create a migration named create_fiona_tables.rb in your Rails projec
 
 ## Usage
 
-Fiona has uses two models (Template and TemplateAttribute).
-Template is an STI table so it is recommended that you subclass it as necessary.
+Create an instance of Template:
 
-Example app/models/setting_template.rb:
+    t = Template.new(:key => 'some_template'
+    t.some_var = 'some sweet value'
+    t.save!
 
-    class SettingTemplate < Template
-    end
+In the above example, 't' can have as many variables associated with it
+as you want.  Their values can be any JSON supported datatype including
+hashes, array, strings, etc.
 
-Create a template for application settings:
+### Subclassing
 
-    settings = SettingTemplate.new
-    settings.key = 'my_settings'
-    settings.app_name = 'My cool app'
-    settings.domain_name = 'somedomain.com'
-    settings.email_addresses = {:support => 'support@somedomain.com', :sales => 'sales@somedomain.com'}
-    settings.save!
+The Template class can be subclassed since it uses Rails STI.
 
-Create a convenient constant for accessing your settings (config/initializers/fiona.rb):
+### SettingsTemplate
 
-    SETTINGS = SettingTemplate.find_by_key('my_settings')
-
-You can now access your settings at any time:
-
-    puts SETTINGS.domain_name
-
-You can change your settings easily whenever you want:
-
-    SETTINGS.whatever = 5
-    SETTINGS.save!
-
-Note: you will need to restart your Rails processes whenever settings change in order for all processes to see the changes.
+Fiona comes with a template class named SettingsTemplate and an
+associated Rails initializer for storing simplifying the management of
+application settings. To begin using this feature you will need to
+uncomment the code in config/initializers/settings.rb.  Your entire
+application will then have access to the constant "S" which contains all
+of your settings.
 
 ## TODO
 
 * Create a generator for creating subclasses of Template.
-* Keep projects clean by storing all template subclasses in app/templates instead of the models directory.
-* Create a singleton for simplifying template access.
 * Improve caching.
 
 ## Contributing to fiona
