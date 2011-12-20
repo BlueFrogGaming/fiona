@@ -6,27 +6,21 @@ Any JSON compatible datastructures and values are permitted (integer, float, str
 
 ## Requirements
 
-* Activerecord (tested with Rails 3.1)
+* Rails 3.x (tested with Rails 3.1)
 
 ## Gem Installation
 
 ### With bundler
 
-Add the following to your Gemfile and run the 'bundle' command to update your Gemfile.lock:
+Add the following to your Gemfile and run the 'bundle' command:
 
     gem "fiona"
 
-### Without bundler
+## Configuration
 
-    gem install "fiona"
-
-## configuration
-
-After you install the gem, you need to generate Fiona's migration:
+After you install the gem, you need to run Fiona's generator:
 
     rails generate fiona
-
-This should create a migration named create_fiona_tables.rb in your Rails project.
 
 ## Usage
 
@@ -42,7 +36,8 @@ hashes, array, strings, etc.
 
 ### Subclassing
 
-The Template class can be subclassed since it uses Rails STI.
+The Template class can be subclassed since it uses Rails STI.  The
+included SettingsTemplate feature is an example of this.
 
 ### SettingsTemplate
 
@@ -58,7 +53,7 @@ of your settings.
 * Create a generator for creating subclasses of Template.
 * Improve caching.
 
-## Contributing to fiona
+## Contributing to Fiona
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
