@@ -21,6 +21,8 @@ class Template < ActiveRecord::Base
       method = method.to_sym
       if processed_attributes.keys.include?(method)
         return processed_attributes[method]
+      elsif default_attributes.keys.include?(method)
+        return default_attributes[method]
       end
     end
 
@@ -53,5 +55,22 @@ class Template < ActiveRecord::Base
     end
 
     return @processed_attributes
+  end
+
+  def default_attributes
+    return @default_attributes || {}
+  end
+
+  def default_attributes=(defaults)
+    @default_attributes = defaults
+  end
+
+  def delete_attribute(attribute)
+    if processed_attributes.include?(attribute)
+      raw_attributes.where(:key => attribute).map{ |a| a.destroy }
+      return processed_attributes.delete(attribute)
+    else
+      return nil
+    end
   end
 end
