@@ -43,10 +43,8 @@ included SettingsTemplate feature is an example of this.
 
 Fiona comes with a template class named SettingsTemplate and an
 associated Rails initializer. Together they simplify the management of
-application settings. To begin using this feature you will need to
-uncomment the code in config/initializers/settings.rb.  Your entire
-application will then have access to the constant "S" which contains all
-of your settings.
+application settings and provide your application with globally
+accessible settings through the 'S' constant.
 
 ## TODO
 
