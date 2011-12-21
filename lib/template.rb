@@ -74,4 +74,8 @@ class Template < ActiveRecord::Base
       return nil
     end
   end
+
+  def all_attributes
+    return default_attributes.dup.merge(processed_attributes)
+  end
 end
