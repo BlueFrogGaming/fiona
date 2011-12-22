@@ -10,8 +10,8 @@ class CreateFionaTables < ActiveRecord::Migration
 
     create_table :template_attributes do |t|
       t.integer :template_id
-      t.string :key
-      t.string :value
+      t.string  :key
+      t.text    :value
 
       t.timestamps
     end
