@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "fiona"
-  s.version = "0.0.12"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chad Remesch"]
-  s.date = "2011-12-22"
+  s.date = "2012-07-16"
   s.description = "Easily store and use template data with Rails."
   s.email = "chad@remesch.com"
   s.extra_rdoc_files = [
@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "fiona.gemspec",
     "lib/fiona.rb",
+    "lib/fiona/setting_template.rb",
+    "lib/fiona/settings.rb",
     "lib/generators/fiona/USAGE",
     "lib/generators/fiona/fiona_generator.rb",
     "lib/generators/fiona/templates/create_fiona_tables.rb",
@@ -34,14 +36,12 @@ Gem::Specification.new do |s|
     "lib/generators/fiona/templates/settings_template.rb",
     "lib/template.rb",
     "lib/template_attribute.rb",
-    "spec/spec_helper.rb",
-    "spec/template_attribute_spec.rb",
-    "spec/template_spec.rb"
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/BlueFrogGaming/fiona"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.24"
   s.summary = "Easily store and use template data with Rails."
 
   if s.respond_to? :specification_version then
