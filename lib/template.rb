@@ -36,7 +36,7 @@ class Template < ActiveRecord::Base
 
     @processed_attributes.each do |key, val|
       TemplateAttribute.transaction do
-        raw_attr = TemplateAttribute.find_or_initialize_by_template_id_and_key(id, key)
+        raw_attr = raw_attributes.find_or_initialize_by_template_id_and_key(id, key)
         raw_attr.value = Template.serialize_attribute(val)
         raw_attr.save!
       end
