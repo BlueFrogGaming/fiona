@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "fiona"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chad Remesch"]
-  s.date = "2012-07-16"
+  s.date = "2013-01-30"
   s.description = "Easily store and use template data with Rails."
   s.email = "chad@remesch.com"
   s.extra_rdoc_files = [
