@@ -1,11 +1,4 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-gem "activerecord", ">= 3"
-
-group :development do
-  gem "rspec", "~> 2.3.0"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.6.4"
-  gem "rcov", ">= 0"
-  gem "rdoc"
-end
+# Specify your gem's dependencies in fiona.gemspec
+gemspec
