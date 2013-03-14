@@ -15,11 +15,15 @@ class Template < ActiveRecord::Base
 
   def method_missing(method, *args, &block)
     if method.to_s =~ /=$/
+      raise 'Template is frozen.' if frozen?
+
       method = method.to_s.gsub(/=$/, '').to_sym
       processed_attributes[method] = args[0]
+
       return args[1]
     else
       method = method.to_sym
+
       if processed_attributes.keys.include?(method)
         return processed_attributes[method]
       elsif default_attributes.keys.include?(method)
@@ -32,7 +36,9 @@ class Template < ActiveRecord::Base
 
   def save_attributes
     return unless @processed_attributes
+
     raise 'You must first save the template.' unless id
+    raise 'Template is frozen.' if frozen?
 
     @processed_attributes.each do |key, val|
       TemplateAttribute.transaction do
@@ -67,6 +73,8 @@ class Template < ActiveRecord::Base
   end
 
   def delete_attribute(attribute)
+    raise 'Template is frozen.' if frozen?
+
     if processed_attributes.include?(attribute)
       raw_attributes.where(:key => attribute).map{ |a| a.destroy }
       return processed_attributes.delete(attribute)
