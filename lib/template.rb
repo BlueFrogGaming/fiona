@@ -3,7 +3,6 @@ class Template < ActiveRecord::Base
   has_many :raw_attributes, :class_name => 'TemplateAttribute', :dependent => :destroy
 
   after_save :save_attributes
-  after_initialize :rebuild_processed_attributes
 
   def self.serialize_attribute(value)
     return ActiveSupport::JSON.encode({:json => value})
@@ -14,6 +13,11 @@ class Template < ActiveRecord::Base
   end
 
   def method_missing(method, *args, &block)
+    unless @initialized
+      rebuild_processed_attributes
+      @initialized = true
+    end
+
     if method.to_s =~ /=$/
       raise 'Template is frozen.' if frozen?
 
